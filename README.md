@@ -9,3 +9,21 @@ It also initializes the following KDL solvers:
  - Forward joint to jacobian solver
  - Forward joint to pose solver
  - Forward joint to acceleration solver
+
+
+--------------------
+Example code: 
+
+You can run the example code under src/pr2_kdl_wrapper_example.cpp by doing the following:
+
+1. Make sure you have the pr2_common metapackage:
+     
+   sudo apt-get install ros-<rosdistro>-pr2-common
+
+2. Upload the PR2 URDF: 
+
+   roslaunch pr2_description upload_pr2.launch kinect:=TRUE
+
+3. Run the pr2_kdl_wrapper_example :
+
+   rosrun kdl_wrapper pr2_kdl_wrapper_example

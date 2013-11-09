@@ -18,9 +18,12 @@ include_directories(
 link_directories(${catkin_LIBRARY_DIRS})
 
 add_library(${PROJECT_NAME} src/kdl_wrapper.cpp)
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} kdl_parser)
 
-install(TARGETS ${PROJECT_NAME} 
+add_executable(pr2_kdl_wrapper_example src/pr2_kdl_wrapper_example.cpp)
+target_link_libraries(pr2_kdl_wrapper_example kdl_wrapper ${catkin_LIBRARIES})
+
+install(TARGETS ${PROJECT_NAME} pr2_kdl_wrapper_example
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

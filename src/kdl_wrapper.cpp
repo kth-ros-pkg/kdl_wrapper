@@ -44,6 +44,7 @@ KDLWrapper::KDLWrapper()
     fk_solver_pos = NULL;
     fk_solver_acc = NULL;
 
+    m_initialized = false;
 }
 
 KDLWrapper::~KDLWrapper()
@@ -79,6 +80,8 @@ bool KDLWrapper::init(const std::string &chain_root, const std::string &chain_ti
 
     //	m_InvVelSolver.reset( new KDL::ChainIkSolverVel_pinv(m_ArmChain, 0.0001, 300));
     ik_solver_vel = new KDL::ChainIkSolverVel_wdls(m_chain, 0.01);
+    ik_solver_vel->setLambda(0.3);
+
     jnt_jac_solver = new KDL::ChainJntToJacSolver(m_chain);
     fk_solver_pos = new KDL::ChainFkSolverPos_recursive(m_chain);
     fk_solver_acc = new KDL::ChainFkSolverAcc_recursive(m_chain);
