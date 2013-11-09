@@ -10,6 +10,9 @@ It also initializes the following KDL solvers:
  - Forward joint to pose solver
  - Forward joint to acceleration solver
 
+Requires the kdl_acc_solver package to be installed in the catkin workspace:
+  
+   git clone https://github.com/kth-ros-pkg/kdl_acc_solver.git
 
 --------------------
 Example code: 
