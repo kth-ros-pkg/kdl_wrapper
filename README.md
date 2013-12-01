@@ -3,7 +3,7 @@ kdl_wrapper
 Overview
 ---------------------------------------------
 Wraps the kdl and kdl_parser packages for generating KDL kinematic chains from URDF
-by taking as inputs the IDs of the root and tip of the kinematic chain.
+by taking as inputs the IDs of the root and tip of the kinematic chain of a robot manipulator.
 
 It also initializes the following KDL solvers:
  - Inverse velocity solver (WDLS)
