@@ -1,6 +1,7 @@
 kdl_wrapper
 ===========
-
+Overview
+---------------------------------------------
 Wraps the kdl and kdl_parser packages for generating KDL kinematic chains from URDF
 by taking as inputs the IDs of the root and tip of the kinematic chain.
 
@@ -15,7 +16,7 @@ Requires the kdl_acc_solver package to be installed in the catkin workspace:
 		git clone https://github.com/kth-ros-pkg/kdl_acc_solver.git
 
 
-Example code: 
+Example code
 ---------------------------------------------
 
 You can run the example code under src/pr2_kdl_wrapper_example.cpp by doing the following:
