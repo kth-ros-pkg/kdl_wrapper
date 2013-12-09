@@ -1,13 +1,13 @@
 <package>
  <name> kdl_wrapper </name>
-  <version>1.0.0</version>
+  <version>0.1.0</version>
   <description>
     Wraps the kdl and kdl_parser packages for generating KDL kinematic chains from URDF.
   </description>
   <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
   <license>BSD</license>
 
-  <url type="website">http://ros.org/wiki/kdl_wrapper</url>
+  <url type="website">http://wiki.ros.org/kdl_wrapper</url>
 
   <author email="fevb@kth.se">Francisco Vina</author>
   <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
