@@ -28,6 +28,8 @@ You can run the example code under src/pr2_kdl_wrapper_example.cpp by doing the 
 
 		roslaunch pr2_description upload_pr2.launch kinect:=TRUE
 
-3. Run the pr2_kdl_wrapper_example :
+3. Compile the `kdl_wrapper` package.
+
+4. Run the pr2_kdl_wrapper_example :
 
 		rosrun kdl_wrapper pr2_kdl_wrapper_example

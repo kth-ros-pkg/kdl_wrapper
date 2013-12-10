@@ -2,7 +2,7 @@
  <name> kdl_wrapper </name>
   <version>0.1.0</version>
   <description>
-    Wraps the kdl and kdl_parser packages for generating KDL kinematic chains from URDF.
+    C++ wrapper for easily using KDL kinematic solvers with robots defined in ROS through URDF files. Wraps the kdl and kdl_parser packages for generating KDL kinematic chains from URDF by just taking as inputs the IDs of the root and tip of the kinematic chain of a robot manipulator.
   </description>
   <maintainer email="fevb@kth.se">Francisco Vina</maintainer>
   <license>BSD</license>
