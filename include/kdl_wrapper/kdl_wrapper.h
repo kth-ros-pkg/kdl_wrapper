@@ -43,6 +43,7 @@
 #include <kdl/chainiksolvervel_wdls.hpp>
 #include <kdl/chainjnttojacsolver.hpp>
 #include <kdl/chainfksolverpos_recursive.hpp>
+#include <kdl/chainfksolvervel_recursive.hpp>
 #include <kdl/chainfksolveracc_recursive.hpp>
 
 class KDLWrapper{
@@ -52,6 +53,7 @@ public:
     KDL::ChainIkSolverVel_wdls *ik_solver_vel;
     KDL::ChainJntToJacSolver *jnt_jac_solver;
     KDL::ChainFkSolverPos *fk_solver_pos;
+    KDL::ChainFkSolverVel *fk_solver_vel;
     KDL::ChainFkSolverAcc *fk_solver_acc;
 
     KDLWrapper();

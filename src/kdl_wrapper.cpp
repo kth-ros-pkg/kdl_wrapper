@@ -84,6 +84,7 @@ bool KDLWrapper::init(const std::string &chain_root, const std::string &chain_ti
 
     jnt_jac_solver = new KDL::ChainJntToJacSolver(m_chain);
     fk_solver_pos = new KDL::ChainFkSolverPos_recursive(m_chain);
+    fk_solver_vel = new KDL::ChainFkSolverVel_recursive(m_chain);
     fk_solver_acc = new KDL::ChainFkSolverAcc_recursive(m_chain);
 
     ROS_DEBUG("Successfully initialized KDL chain");
