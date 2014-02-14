@@ -42,6 +42,7 @@ KDLWrapper::KDLWrapper()
     ik_solver_vel = NULL;
     jnt_jac_solver = NULL;
     fk_solver_pos = NULL;
+    fk_solver_vel = NULL;
     fk_solver_acc = NULL;
 
     m_initialized = false;
@@ -53,6 +54,7 @@ KDLWrapper::~KDLWrapper()
     delete ik_solver_vel;
     delete jnt_jac_solver;
     delete fk_solver_pos;
+    delete fk_solver_vel;
     delete fk_solver_acc;
 }
 
