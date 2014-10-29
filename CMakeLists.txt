@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(kdl_wrapper)
 
 find_package(orocos_kdl REQUIRED)
-find_package(catkin REQUIRED COMPONENTS roscpp urdf kdl_acc_solver)
+find_package(catkin REQUIRED COMPONENTS roscpp urdf kdl_acc_solver kdl_parser)
 
 include_directories(include ${orocos_kdl_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS})
 
@@ -13,7 +13,7 @@ find_library(KDL_LIBRARY REQUIRED NAMES orocos-kdl HINTS ${orocos_kdl_LIBRARY_DI
 
 catkin_package(
   DEPENDS orocos_kdl
-  CATKIN_DEPENDS urdf kdl_acc_solver
+  CATKIN_DEPENDS urdf kdl_acc_solver kdl_parser
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME} 
 )
