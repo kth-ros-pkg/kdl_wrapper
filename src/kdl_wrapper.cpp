@@ -81,8 +81,8 @@ bool KDLWrapper::init(const std::string &chain_root, const std::string &chain_ti
     ROS_DEBUG("Number of joints in chain: %d", m_chain.getNrOfJoints());
 
     //	m_InvVelSolver.reset( new KDL::ChainIkSolverVel_pinv(m_ArmChain, 0.0001, 300));
-    ik_solver_vel = new KDL::ChainIkSolverVel_wdls(m_chain, 0.01);
-    ik_solver_vel->setLambda(0.3);
+    ik_solver_vel = new KDL::ChainIkSolverVel_wdls(m_chain, 0.001, 5);
+    ik_solver_vel->setLambda(100.0);
 
     jnt_jac_solver = new KDL::ChainJntToJacSolver(m_chain);
     fk_solver_pos = new KDL::ChainFkSolverPos_recursive(m_chain);
